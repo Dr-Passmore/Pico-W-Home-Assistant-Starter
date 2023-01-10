@@ -1,13 +1,13 @@
 import time
-from machine import Pin
+#from machine import Pin
 import network
-
+import socket
 # python file containing wifi creds
-import wifi_creds
+import wificreds
 
 # creds from wifi_creds.py
-ssid = wifi_creds.wifi_ssid
-password = wifi_creds.wifi_password
+ssid = wificreds.wifi_ssid
+password = wificreds.wifi_password
 
 wireless = network.WLAN(network.STA_IF)
 wireless.active(True)
@@ -28,3 +28,4 @@ else:
     print("Succesfully Connected")
     status = wireless.ifconfig()
     print(f'Device IP Address is {status[0]}')
+    
