@@ -4,10 +4,17 @@ import network
 import socket
 # python file containing wifi creds
 import wificreds
+import mqttcreds
 
 # creds from wifi_creds.py
 ssid = wificreds.wifi_ssid
 password = wificreds.wifi_password
+
+# MQTT creds
+mqttlogin = mqttcreds.mqttLogin
+mqttpassword = mqttcreds.mqttPassword
+mqttIP = mqttcreds.mqttIP
+
 
 wireless = network.WLAN(network.STA_IF)
 wireless.active(True)
